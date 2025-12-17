@@ -1,0 +1,22 @@
+# Ignorer tout SAUF dist/
+*
+!.gitignore
+!dist/
+!dist/**
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# PyInstaller
+build/
+*.spec
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
