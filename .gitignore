@@ -1,8 +1,17 @@
-# Ignorer tout SAUF dist/
+# Ignorer tout SAUF dist/, fichiers source et assets
 *
 !.gitignore
 !dist/
 !dist/**
+!main.py
+!image_button.py
+!questions_loader.py
+!config.txt
+!icon.ico
+!questions/
+!questions/**
+!assets/
+!assets/**
 
 # Python
 __pycache__/
