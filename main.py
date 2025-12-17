@@ -317,44 +317,6 @@ class MainWindow(QMainWindow):
         
         self._create_all_buttons()
         
-        # Panel de question
-        question_panel = QFrame()
-        question_panel.setStyleSheet(f"""
-            QFrame {{
-                background-color: rgba(52, 73, 94, 230);
-                border: 3px solid {COLORS['border']};
-                border-radius: 15px;
-            }}
-        """)
-        question_panel.setMinimumHeight(180)
-        
-        question_layout = QVBoxLayout(question_panel)
-        question_layout.setContentsMargins(20, 15, 20, 15)
-        
-        # Label domaine
-        self.domain_label = QLabel("Cliquez sur un numéro pour commencer")
-        self.domain_label.setFont(QFont("Segoe UI", 14, QFont.Weight.Bold))
-        self.domain_label.setStyleSheet(f"color: {COLORS['border']}; background: transparent; border: none;")
-        self.domain_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        question_layout.addWidget(self.domain_label)
-        
-        # Zone de texte question
-        self.question_text = QTextEdit()
-        self.question_text.setReadOnly(True)
-        self.question_text.setFont(QFont("Segoe UI", 16))
-        self.question_text.setStyleSheet(f"""
-            QTextEdit {{
-                background-color: transparent;
-                color: {COLORS['text_light']};
-                border: none;
-            }}
-        """)
-        self.question_text.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.question_text.setMinimumHeight(120)
-        question_layout.addWidget(self.question_text)
-        
-        main_layout.addWidget(question_panel)
-        
         # Supprimer l'espacement avant le crédit
         main_layout.setSpacing(0)
         
@@ -486,26 +448,9 @@ class MainWindow(QMainWindow):
         
         info = self.all_buttons[button_index]
         btn = info["button"]
-        category = info["category"]
-        domain = info["domain"]
         
         self.clicked_buttons.add(button_index)
         btn.set_disabled_state()
-        
-        question = self.question_manager.get_random_question(category, domain)
-        
-        if question:
-            if category in ["user1", "user2"]:
-                label_text = f"📖 {info['label']} - {domain.capitalize()}"
-            else:
-                label_text = f"📖 {info['label']}"
-            
-            self.domain_label.setText(label_text)
-            self.question_text.setAlignment(Qt.AlignmentFlag.AlignCenter)
-            self.question_text.setText(question)
-        else:
-            self.domain_label.setText(f"⚠️ {info['label']}")
-            self.question_text.setText("Aucune question disponible pour cette catégorie.")
 
 
 # =============================================================================
