@@ -1,0 +1,5 @@
+﻿# Ignorer tout SAUF dist/
+*
+!.gitignore
+!dist/
+!dist/**
