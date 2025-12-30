@@ -6,5 +6,5 @@ Joueur 1 : Paume
 Joueur 2 : Serda
 
 # Taille de la fenêtre (en pixels)
-Largeur : 600
-Hauteur : 600
+Largeur : 1200
+Hauteur : 800
