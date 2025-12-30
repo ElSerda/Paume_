@@ -1,9 +1,3 @@
-MALUS ! Passe ton tour.
+MALUS ! -1
 
-MALUS ! Recule de 2 cases.
-
-MALUS ! L'adversaire gagne un point bonus.
-
-MALUS ! Tu perds un point.
-
-MALUS ! Question difficile pour toi au prochain tour.
+MALUS ! -2

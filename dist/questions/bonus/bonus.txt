@@ -1,9 +1,5 @@
-BONUS ! Tu rejoues !
+BONUS ! +1
 
-BONUS ! Double tes points ce tour.
+BONUS ! +2
 
-BONUS ! L'adversaire passe son tour.
 
-BONUS ! Choisis la catégorie de ta prochaine question.
-
-BONUS ! Gagne un point supplémentaire !
