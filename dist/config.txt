@@ -8,3 +8,7 @@ Joueur 2 : Serda
 # Taille de la fenêtre (en pixels)
 Largeur : 600
 Hauteur : 600
+
+# Taille de la police des boutons (ratio par rapport à la hauteur du bouton)
+# Valeurs recommandées : 0.30 à 0.50 (défaut : 0.45)
+Font Ratio : 0.45
